@@ -1,0 +1,21 @@
+.burger-button {
+  @include btn-reset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  min-width: unset;
+  padding: 0;
+  border: none;
+  transition: $transition;
+
+  & .icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  & use.icon__symbol {
+    fill: $blue;
+  }
+}

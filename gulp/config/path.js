@@ -33,7 +33,6 @@ export const path = {
         images: basePath.src + '/img/**/*.{jpg,jpeg,png}',
         imgOpt: basePath.src + '/img-optimized/', // Оптимизированные изображения (jpg,jpeg,png}
         fonts: basePath.src + '/fonts/',
-
         svg: basePath.blocks + '/**/*.svg',
         svgIcons: basePath.src + '/img-optimized/icons/icon-*.svg',
         svgOpt: basePath.src + '/img-optimized/', // Оптимизированные изображения (svg}

@@ -7,6 +7,7 @@ import newer from "gulp-newer";
 import svgo from "gulp-svgo";
 
 import tinypng from "gulp-tinypng-extended";
+import {basePath} from "../config/path.js";
 
 export const imgopt = (done) => {
     console.log(app.blocks);
@@ -42,7 +43,7 @@ export const img = (done) => {
 
 
         // Возьми все изображения из папки
-        return app.gulp.src(app.path.src.imgOpt + '/' + block + '/*.{jpg,jpeg,png}')
+        return app.gulp.src(basePath.blocks + '/' + block + '/*.{jpg,jpeg,png}')
 
             .pipe(app.plugins.plumber(
                 app.plugins.notify.onError({

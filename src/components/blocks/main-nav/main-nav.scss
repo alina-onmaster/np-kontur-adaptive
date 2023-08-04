@@ -1,0 +1,61 @@
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $blue;
+  color: $light;
+  padding-top: 25px;
+  padding-bottom: 45px;
+  transform: translateY(-100%);
+  transition: $transition;
+
+  @media (min-width: $lg-width) {
+    position: static;
+    transform: translateY(0);
+    padding: 0;
+    background-color: transparent;
+    color: $dark;
+  }
+
+  &--opened {
+    transform: translateY(0);
+  }
+
+  &__wrap {
+    @include container;
+
+    @media (min-width: $lg-width) {
+      max-width: unset;
+      padding: 0;
+    }
+  }
+
+  & .close-button {
+    @include btn-reset;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    min-width: unset;
+    padding: 0;
+    border: none;
+    transition: $transition;
+    margin-bottom: 10px;
+
+    @media (min-width: $lg-width) {
+      display: none;
+    }
+
+    & .icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    & use.icon__symbol {
+      fill: $light;
+    }
+  }
+
+}
