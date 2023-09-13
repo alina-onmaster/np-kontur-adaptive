@@ -37,6 +37,16 @@
       padding-right: 0;
     }
 
+    & li {
+      @media (min-width: $lg-width) {
+        &.active {
+          & a {
+            background-color: $red;
+          }
+        }
+      }
+    }
+
     & a {
       display: inline-flex;
       align-items: center;
@@ -69,7 +79,6 @@
         @media (min-width: $lg-width) {
           border-bottom: none;
           background-color: $red;
-
         }
       }
 

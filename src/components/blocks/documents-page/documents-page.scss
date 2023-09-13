@@ -1,0 +1,39 @@
+.documents-page {
+  & ul.doc-slider {
+    @include list();
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    & li {
+      width: 180px;
+      border: 1px solid $blue;
+    }
+    & a {
+      width: 100%;
+      display: inline-block;
+    }
+    & img {
+      width: 100%;
+    }
+
+
+  }
+
+  & .btn-link {
+    margin-top: 20px;
+    display: inline-flex;
+    padding: 15px;
+    color: $light;
+    background-color: $blue;
+    border: 1px solid $blue;
+    transition: $transition;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $blue;
+      background-color: $light;
+    }
+  }
+}

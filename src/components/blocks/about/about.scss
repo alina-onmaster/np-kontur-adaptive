@@ -1,0 +1,43 @@
+.about-page {
+  &__history-list {
+    @include list();
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    & .description {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      @media (min-width: $md-width) {
+        flex-direction: row;
+        gap: 10px;
+      }
+    }
+
+    & h2 {
+      width: 100%;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    & .img-list {
+      display: flex;
+      flex-direction: column;
+
+      a {
+
+      }
+    }
+
+    & p {
+      text-align: justify;
+
+      @media (min-width: $md-width) {
+        width: 50%;
+        flex-grow: 1;
+      }
+    }
+  }
+}
