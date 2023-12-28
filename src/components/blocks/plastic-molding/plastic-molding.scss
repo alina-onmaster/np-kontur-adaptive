@@ -66,6 +66,9 @@
             "text";
         row-gap: 11px;
         column-gap: 30px;
+        background: none;
+        background-image: none;
+
 
         @media (min-width: $md-width) {
             grid-template-columns: 1fr 1fr 1fr;
@@ -80,7 +83,7 @@
             grid-template-areas: 
             "title form form form"
             "title text text privacy-policy";
-        }
+        }        
 
         & h2 {
             color: white;
@@ -120,8 +123,6 @@
         }
 
         & .feedback_form {
-            border: 1px solid white;
-            min-height: 50px;
             grid-area: form;
         }
 
@@ -179,6 +180,16 @@
                 text-decoration-color: #338ED1;
             }
         }
+    }
+
+    &__consultation--main {
+        @media (min-width: $lg-width) {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+                "form form form"
+                "text text privacy-policy";
+        }
+        
     }
 
     &__work-stages {
@@ -242,6 +253,65 @@
             letter-spacing: 0.16px;
         }
     }
+
+    &__advantages-list {
+        @media (min-width: $md-width) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__advantages-item {
+        @media (min-width: $md-width) {
+            width: 45%;
+            flex-grow: 1;
+        }
+    }
+
+    & .gallery {
+        & .slick-prev,
+        & .slick-next {
+          background: none;
+          width: 30px;
+          height: 50px;
+          z-index: 10;
+      
+          &::before {
+            content: "";
+            width: 30px;
+            display: block;
+            height: 30px;
+            border-top: 3px solid #fd2015;
+            border-left: 3px solid #fd2015;
+            
+          }
+        }
+      
+      
+        & .slick-prev {
+          left: -15px;
+
+          @media (min-width: 1170px) {
+            left: -28px;
+          }
+      
+          &::before {
+            transform: rotate(-45deg) translateY(5px) translateX(5px);
+          }
+        }
+      
+        & .slick-next {
+          right: -15px;
+
+          @media (min-width: 1170px) {
+            right: -28px;
+          }
+
+          &::before {
+            transform: rotate(135deg) translateY(6px) translateX(6px);
+          }
+        }
+    }
 }
 
 .feedback {
@@ -250,3 +320,59 @@
         text-decoration-color: white;
     }
 }
+
+.landing .feedback.plastic-molding__consultation {
+    background-color: transparent;
+    background-image: none;
+    max-width: 320px;
+    margin: 0 auto;
+
+    @media (min-width: $md-width) {
+        max-width: unset;
+    }
+    
+
+    & input[type="tel"],
+    & input[type="text"] {
+        width: 100% !important;
+        padding: 10px;
+
+        @media (min-width: $md-width) {
+            margin-bottom: 0;
+        }
+    }
+
+    & button {
+        width: 100%;
+        grid-area: button;
+    }
+}
+
+
+.landing .feedback.plastic-molding__consultation form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "name" "phone" "button";
+    gap: 10px;
+
+    @media (min-width: $md-width) {
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 30px;
+        grid-template-areas: "name phone button";
+    }
+
+}
+
+.landing .feedback.plastic-molding__consultation .form-consult_field {
+
+    &--name {
+        grid-area: name;
+    }
+
+    &--tel {
+        grid-area: phone;
+    }
+
+    
+}
+

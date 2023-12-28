@@ -12,7 +12,7 @@
 
   @media (min-width: $lg-width) {
     position: static;
-    transform: translateY(0);
+    transform: none;
     padding: 0;
     background-color: transparent;
     color: $dark;

@@ -1,20 +1,36 @@
 .main-header {
-  overflow: hidden;
-  position: relative;
-  padding-top: 25px;
-  padding-bottom: 15px;
-  background-image: url("../main-header/rule-bg.png");
-  background-size: auto 11px;
-  background-repeat: repeat-x;
-  background-position: center top;
-  z-index: 5;
+  position: fixed; /* Сделайте его липким/фиксированным */
+  top: 0; /* Оставайтесь на вершине */
+  width: 100%; /* Полная ширина */
+  transition: top 0.3s; /* Эффект перехода при скольжении вниз (и вверх) */
+  z-index: 1000;
+  background: #d6d6d6 url(../img/metall.jpg) center center repeat;    
+
 
   @media (min-width: $lg-width) {
-    overflow: unset;
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: rgba(255, 255, 255, 0.35);
-    background-size: unset;
+    position: relative;
+    top: unset;
+    width: 100%;
+    transition: unset;
+  }
+
+  &__div {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    background-image: url("../main-header/rule-bg.png");
+    background-size: auto 11px;
+    background-repeat: repeat-x;
+    background-position: center top;
+    
+  
+    @media (min-width: $lg-width) {
+      overflow: unset;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: rgba(255, 255, 255, 0.35);
+      background-size: unset;
+    }
   }
 
 
@@ -77,5 +93,13 @@
     & use.icon__symbol {
       fill: $blue;
     }
+  }
+}
+
+.crossbar {
+  height: 73px;
+
+  @media (min-width: $lg-width) {
+    height: 32px;
   }
 }

@@ -28,3 +28,55 @@ openMenu.onclick = function () {
 closeMenu.onclick = function () {
     siteNav.classList.remove("main-nav--opened");
 };
+
+
+
+/*Проверка ширины экрана*/
+function checkScreen() {
+    let windowWidth = document.documentElement.clientWidth; // ширина окна за вычетом полосы прокрутки
+    console.log(windowWidth);
+
+    if (windowWidth < 1060) {
+        /* Когда пользователь прокручивает вниз, скрыть навигационную панель. Когда пользователь прокручивает вверх, показать навигационную панель */
+        var prevScrollpos = window.pageYOffset;
+        
+        window.onscroll = function() {
+
+        var currentScrollPos = window.pageYOffset;
+
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("header").style.top = "0";
+            console.log(prevScrollpos);
+        } else {
+            document.getElementById("header").style.top = "-75px";
+            console.log(prevScrollpos);
+        }
+
+        prevScrollpos = currentScrollPos;
+        
+        }
+    } else {
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        var heightHeader = 170;
+
+        if (heightHeader > currentScrollPos) {
+            document.getElementById("nav").style.top = (heightHeader-currentScrollPos) + "px";
+            console.log(prevScrollpos);
+        } else {
+            document.getElementById("nav").style.top = "0";
+            console.log(prevScrollpos);
+        }
+        prevScrollpos = currentScrollPos;
+        
+        }
+    }
+};
+
+checkScreen();
+
+
+
+
+
+

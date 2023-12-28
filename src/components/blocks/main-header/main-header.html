@@ -1,34 +1,38 @@
-<section class="main-header">
-    <div class="main-header__wrap">
-        <include src="./src/components/blocks/burger/burger.html"></include>
-        <a class="main-header__logo" href="#">
-            <picture>
-                <source type="image/webp" media="(min-width: 1060px)" srcset="
-                        ../logo/logo-1920.webp,
-                        ../logo/logo-390@2x.webp 2x,
-                        ../logo/logo-390@3x.webp 3x">
-                <source type="image/webp" srcset="
-                        ../logo/logo-178@1x.webp 1x,
-                        ../logo/logo-178@2x.webp 2x,
-                        ../logo/logo-178@3x.webp 3x">
-                <source type="image/jpeg" media="(min-width: 1060px)" srcset="
-                        ../logo/logo-1920.png 1x,
-                        ../logo/logo-390@2x.png 2x,
-                        ../logo/logo-390@3x.png 3x">
-                <source type="image/jpeg" srcset="
-                        ../logo/logo-178@1x.png 1x,
-                        ../logo/logo-178@2x.png 2x,
-                        ../logo/logo-178@3x.png 3x">
-
-                <img src="/../logo/logo.png" alt="Логотип ООО НПП Контур">
-            </picture>
-            <span>ИСО 9001-2015 (ISO 9001:2015)</span>
-        </a>
-        <a class="icon-phone" href="tel:+78352418400">
-            <svg class="icon" width="30px" height="30px" fill="none">
-                <use class="icon__symbol" xlink:href="#icon-phone"></use>
-            </svg>
-        </a>
-        <include src="./src/components/blocks/main-nav/main-nav.html"></include>
+<section class="main-header"  id="header">
+    <div class="main-header__div">
+        <div class="main-header__wrap">
+            <include src="./src/components/blocks/burger/burger.html"></include>
+            <a class="main-header__logo" href="#">
+                <picture>
+                    <source type="image/webp" media="(min-width: 1060px)" srcset="
+                            ../logo/logo-1920.webp,
+                            ../logo/logo-390@2x.webp 2x,
+                            ../logo/logo-390@3x.webp 3x">
+                    <source type="image/webp" srcset="
+                            ../logo/logo-178@1x.webp 1x,
+                            ../logo/logo-178@2x.webp 2x,
+                            ../logo/logo-178@3x.webp 3x">
+                    <source type="image/jpeg" media="(min-width: 1060px)" srcset="
+                            ../logo/logo-1920.png 1x,
+                            ../logo/logo-390@2x.png 2x,
+                            ../logo/logo-390@3x.png 3x">
+                    <source type="image/jpeg" srcset="
+                            ../logo/logo-178@1x.png 1x,
+                            ../logo/logo-178@2x.png 2x,
+                            ../logo/logo-178@3x.png 3x">
+    
+                    <img src="/../logo/logo.png" alt="Логотип ООО НПП Контур">
+                </picture>
+                <span>ИСО 9001-2015 (ISO 9001:2015)</span>
+            </a>
+            <a class="icon-phone" href="tel:+78352418400">
+                <svg class="icon" width="30px" height="30px" fill="none">
+                    <use class="icon__symbol" xlink:href="#icon-phone"></use>
+                </svg>
+            </a>
+            <include src="./src/components/blocks/main-nav/main-nav.html"></include>
+        </div>
     </div>
+    
 </section>
+<div class="crossbar"></div>

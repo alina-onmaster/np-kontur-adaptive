@@ -12,6 +12,21 @@
     flex-direction: column;
   }
 
+  &__top {
+    @media (min-width: $lg-width) {
+      height: 170px;
+    }
+  }
+
+  &__list-wrap {
+    @media (min-width: $lg-width) {
+      position: fixed!important;
+      width: 100%;
+      top: 170px; /*высота шапки в пикселях*/      
+      z-index: 1000;
+    }
+  }
+
   &__list-wrap {
     @media (min-width: $lg-width) {
       background-color: $blue;

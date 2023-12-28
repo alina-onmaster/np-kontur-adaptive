@@ -1,6 +1,28 @@
 .content {
   min-width: 320px;
 }
+
+.cat_img {
+  width: 100vw;
+  transform: translateX(-50%);
+
+  & > img {
+    margin-left: 0;
+    left: 0;
+    position: static;
+  }
+
+}
+
+@media (max-width: 1059px) {
+  .cat_img {
+    margin-top: -10px;
+  }
+}
+
+
+
+
 /*Слайдер*/
 @media (max-width: 1059px) {
   #mp-slider {
@@ -458,6 +480,8 @@
   object-position: center;
   object-fit: cover;
 }
+
+
 
 
 
